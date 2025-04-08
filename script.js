@@ -694,7 +694,7 @@
 
 // for (i=0; i<=fruits.length; i++){
 //     document.write(`${fruits[i]} <br> `)
-    
+
 // }
 
 // document.write(`<br>`)
@@ -809,3 +809,285 @@
 //     }
 // }
 
+
+
+
+// Create a simple ATM withdrawal system where:
+// The user enters the amount they want to withdraw.
+// The system checks if the amount is available in the ATM.
+// The system dispenses the correct number of bills in denominations of 100, 500, and 1000.
+// If the amount is not a multiple of 100, show an error message.
+
+
+// let totalCash = 50000;
+
+
+// let amount = parseInt(prompt("Enter the amount you want to withdraw:"));
+
+
+// if (isNaN(amount) || amount <= 0) {
+//     alert("Invalid amount entered.");
+// } else if (amount % 100 !== 0) {
+//     alert("Please enter the amount in multiples of 100.");
+// } else if (amount > totalCash) {
+//     alert("Insufficient funds in ATM.");
+// } else {
+    
+//     let thousandNotes = Math.floor(amount / 1000);
+//     amount %= 1000;
+
+//     let fiveHundredNotes = Math.floor(amount / 500);
+//     amount %= 500;
+
+//     let hundredNotes = Math.floor(amount / 100);
+
+//     alert(
+//         "Transaction Successful!\n\nBills Dispensed:\n" +
+//         "1000 x " + thousandNotes + "\n" +
+//         "500 x " + fiveHundredNotes + "\n" +
+//         "100 x " + hundredNotes
+//     );
+// }
+
+
+// Create a parking fee calculator where:
+// The first 2 hours are free.
+// After 2 hours, the fee is $5 per hour.
+// If the vehicle stays for more than 10 hours, a fixed rate of $50 is charged.
+
+
+// let hours = parseFloat(prompt("Enter number of hours parked:"));
+
+// if (isNaN(hours) || hours <= 0) {
+//     alert("Please enter a valid number of hours.");
+// } else {
+//     let fee = 0;
+
+//     if (hours <= 2) {
+//         fee = 0;
+//     } else if (hours > 10) {
+//         fee = 50;
+//     } else {
+//         fee = (hours - 2) * 5;
+//     }
+
+//     alert(`Parking duration: ${hours} hour(s)\nTotal fee: $${fee}`);
+// }
+
+
+
+// Create a speed checking system where:
+// If speed is <= 60 km/h, it's "Safe Speed".
+// If speed is between 61 and 80 km/h, a warning is issued.
+// If speed is above 80 km/h, a fine of $10 per km over 80 is calculated.
+
+
+
+// let speed = parseFloat(prompt("Enter your speed in km/h:"));
+
+// if (isNaN(speed) || speed < 0) {
+//     alert("Please enter a valid speed.");
+// } else {
+//     if (speed <= 60) {
+//         alert("Safe Speed. Keep it up!");
+//     } else if (speed <= 80) {
+//         alert("Warning: Please slow down!");
+//     } else {
+//         let extraSpeed = speed - 80;
+//         let fine = extraSpeed * 10;
+//         alert(`You are over the speed limit!\nFine: $${fine}`);
+//     }
+// }
+
+
+// Create a loan interest calculator where:
+// If the loan amount is ≤ $10,000, the interest rate is 5%.
+// If it's between $10,001 and $50,000, the interest rate is 7%.
+// If it's above $50,000, the interest rate is 10%.
+// Calculate the total amount to be paid back.
+
+
+
+// let loanAmount = parseFloat(prompt("Enter your loan amount:"));
+
+
+// if (isNaN(loanAmount) || loanAmount <= 0) {
+//     alert("Please enter a valid loan amount.");
+// } else {
+//     let interestRate = 0;
+
+    
+//     if (loanAmount <= 10000) {
+//         interestRate = 0.05;
+//     } else if (loanAmount <= 50000) {
+//         interestRate = 0.07;
+//     } else {
+//         interestRate = 0.10;
+//     }
+
+
+//     let interest = loanAmount * interestRate;
+//     let totalPayment = loanAmount + interest;
+
+//     alert(
+//         `Loan Amount: $${loanAmount.toFixed(2)}\n` +
+//         `Interest Rate: ${(interestRate * 100)}%\n` +
+//         `Interest: $${interest.toFixed(2)}\n` +
+//         `Total to Pay Back: $${totalPayment.toFixed(2)}`
+//     );
+// }
+
+
+// A toll booth collects different tolls based on vehicle type:
+// Car → $5
+// Truck → $10
+// Bus → $8
+// If a vehicle doesn't have enough money, let it pass but record unpaid tolls.
+
+
+
+// let unpaidTolls = [];
+
+
+// let vehicleType = prompt("Enter vehicle type (car, truck, bus):").toLowerCase();
+// let moneyPaid = parseFloat(prompt("Enter money paid by the vehicle:"));
+
+
+// let tollAmount = 0;
+
+
+// if (vehicleType === "car") {
+//     tollAmount = 5;
+// } else if (vehicleType === "truck") {
+//     tollAmount = 10;
+// } else if (vehicleType === "bus") {
+//     tollAmount = 8;
+// } else {
+//     alert("Invalid vehicle type.");
+// }
+
+// if (tollAmount !== 0) {
+//     if (moneyPaid >= tollAmount) {
+//         alert(`Vehicle type: ${vehicleType}\nToll: $${tollAmount}\nPayment successful. Vehicle can pass.`);
+//     } else {
+//         alert(`Vehicle type: ${vehicleType}\nToll: $${tollAmount}\nNot enough money. Vehicle passes with unpaid toll.`);
+//         unpaidTolls.push({ vehicleType: vehicleType, tollAmount: tollAmount });
+//     }
+// }
+
+
+// console.log("Unpaid tolls:", unpaidTolls);
+
+
+// A class of 3 students takes 4 subjects. Generate random marks, find average & grade.
+
+
+// for (let student = 1; student <= 3; student++) {
+
+//     let marks = [];
+//     let totalMarks = 0;
+    
+//     for (let subject = 1; subject <= 4; subject++) {
+//         let mark = Math.floor(Math.random() * 101); // Generate random mark between 0 and 100
+//         marks.push(mark);
+//         totalMarks += mark;
+//     }
+
+
+//     let average = totalMarks / 4;
+
+
+//     let grade = "";
+//     if (average >= 90) {
+//         grade = "A";
+//     } else if (average >= 80) {
+//         grade = "B";
+//     } else if (average >= 70) {
+//         grade = "C";
+//     } else if (average >= 60) {
+//         grade = "D";
+//     } else {
+//         grade = "F";
+//     }
+
+//     console.log(`Student ${student}:`);
+//     console.log(`Marks: ${marks.join(", ")}`);
+//     console.log(`Average: ${average.toFixed(2)}`);
+//     console.log(`Grade: ${grade}\n`);
+// }
+
+// A university has 8 students who get random exam scores between 0 - 100. A student:
+// Passes if score ≥ 50
+// Fails if score < 50
+//  The program calculates how many students passed and failed.
+
+
+
+// let passed = 0;
+// let failed = 0;
+
+
+// for (let student = 1; student <= 8; student++) {
+    
+//     let score = Math.floor(Math.random() * 101);
+
+    
+//     if (score >= 50) {
+//         passed++;
+//     } else {
+//         failed++;
+//     }
+
+    
+//     console.log(`Student ${student} - Score: ${score} - ${score >= 50 ? 'Passed' : 'Failed'}`);
+// }
+
+
+// console.log(`\nTotal Passed: ${passed}`);
+// console.log(`Total Failed: ${failed}`);
+
+
+// A cinema has 10 seats available. Customers randomly book seats and pay based on age:
+// Children (0-12) → $5
+// Adults (13-59) → $10
+// Seniors (60+) → $7
+//  The program books seats until they are full and calculates total revenue.
+
+
+
+// let seatsAvailable = 10;
+// let totalRevenue = 0;
+
+
+// while (seatsAvailable > 0) {
+    
+//     let age = Math.floor(Math.random() * 100); 
+
+    
+//     let price;
+//     if (age >= 0 && age <= 12) {
+//         price = 5; 
+//     } else if (age >= 13 && age <= 59) {
+//         price = 10; 
+//     } else {
+//         price = 7; 
+//     }
+
+
+//     totalRevenue += price;
+//     seatsAvailable--;
+
+
+//     console.log(`Customer with age ${age} booked a seat for $${price}.`);
+// }
+
+
+// console.log(`\nTotal Revenue: $${totalRevenue}`);
+
+
+
+A parking lot has 15 cars parked. Each car is parked for a random number of hours (1-10 hours).
+Up to 3 hours → $3 per hour
+4-6 hours → $2 per hour
+7+ hours → $1 per hour
+ The program calculates total parking fees collected
