@@ -1086,8 +1086,107 @@
 
 
 
-A parking lot has 15 cars parked. Each car is parked for a random number of hours (1-10 hours).
-Up to 3 hours → $3 per hour
-4-6 hours → $2 per hour
-7+ hours → $1 per hour
- The program calculates total parking fees collected
+// A parking lot has 15 cars parked. Each car is parked for a random number of hours (1-10 hours).
+// Up to 3 hours → $3 per hour
+// 4-6 hours → $2 per hour
+// 7+ hours → $1 per hour
+//  The program calculates total parking fees collected     
+
+
+// let totalRevenue = 0;
+
+
+// for (let car = 1; car <= 15; car++) {
+    
+//     let hours = Math.floor(Math.random() * 10) + 1;
+
+    
+//     let fee;
+//     if (hours <= 3) {
+//         fee = hours * 3; 
+//     } else if (hours >= 4 && hours <= 6) {
+//         fee = hours * 2; 
+//     } else {
+//         fee = hours * 1; 
+//     }
+
+    
+//     totalRevenue += fee;
+
+
+//     console.log(`Car ${car} - Hours: ${hours} - Fee: $${fee}`);
+// }
+
+
+// console.log(`\nTotal Parking Fees Collected: $${totalRevenue}`);
+
+
+// A library has 20 borrowers who return books late by 1-15 days.
+// 1-5 days late → $2 per day
+// 6-10 days late → $3 per day
+// 11+ days late → $5 per day
+//  The program calculates total late fees collected.
+
+
+// let totalLateFees = 0;
+
+
+// for (let borrower = 1; borrower <= 20; borrower++) {
+    
+//     let daysLate = Math.floor(Math.random() * 15) + 1;
+
+    
+//     let lateFee;
+//     if (daysLate >= 1 && daysLate <= 5) {
+//         lateFee = daysLate * 2; 
+//     } else if (daysLate >= 6 && daysLate <= 10) {
+//         lateFee = daysLate * 3; 
+//     } else {
+//         lateFee = daysLate * 5; 
+//     }
+
+    
+//     totalLateFees += lateFee;
+
+    
+//     console.log(`Borrower ${borrower} - Days Late: ${daysLate} - Late Fee: $${lateFee}`);
+// }
+
+
+// console.log(`\nTotal Late Fees Collected: $${totalLateFees}`);
+
+
+// A gas station serves 10 cars, each requesting a random amount of fuel (5-50 liters).
+// Up to 20 liters → $1.2 per liter
+// 21-35 liters → $1.0 per liter
+// 36+ liters → $0.8 per liter
+//  The program calculates total revenue from all cars.
+
+
+// let totalRevenue = 0;
+
+
+// for (let car = 1; car <= 10; car++) {
+    
+//     let fuelRequested = Math.floor(Math.random() * 46) + 5; 
+
+    
+//     let pricePerLiter;
+//     if (fuelRequested <= 20) {
+//         pricePerLiter = 1.2; 
+//     } else if (fuelRequested >= 21 && fuelRequested <= 35) {
+//         pricePerLiter = 1.0; 
+//     } else {
+//         pricePerLiter = 0.8; 
+//     }
+
+
+//     let carRevenue = fuelRequested * pricePerLiter;
+//     totalRevenue += carRevenue;
+
+
+//     console.log(`Car ${car} - Fuel Requested: ${fuelRequested} liters - Revenue: $${carRevenue.toFixed(2)}`);
+// }
+
+
+// console.log(`\nTotal Revenue: $${totalRevenue.toFixed(2)}`);
